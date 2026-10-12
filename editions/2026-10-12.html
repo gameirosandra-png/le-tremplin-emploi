@@ -1,0 +1,132 @@
+<!doctype html><html lang="fr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Le Tremplin</title><style>
+:root{--ink:#172033;--muted:#5b6475;--line:#d9deea;--bg:#f5f7fb;--card:#fff;--blue:#2446a6;--green:#176b45;--amber:#875500;--red:#9c2c2c}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.55 system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif}
+header{background:#172033;color:#fff;padding:36px max(22px,calc((100% - 1000px)/2))}
+header p{color:#dce4ff;max-width:780px}main{max-width:1000px;margin:26px auto;padding:0 18px}
+h1{font-size:clamp(1.7rem,4vw,2.5rem);line-height:1.15;margin:.2em 0}h2{margin-top:36px;border-bottom:2px solid var(--line);padding-bottom:8px}h3{margin:.2em 0 .5em}a{color:var(--blue);font-weight:650;text-underline-offset:3px}a:focus,a:hover{text-decoration-thickness:2px}
+.meta{font-size:.92rem;color:#e3e9ff}.notice{padding:16px 18px;background:#fff8e8;border:1px solid #efd9a3;border-radius:12px;margin:18px 0}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:14px}.card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:18px;margin:14px 0;box-shadow:0 2px 6px #1720330a}.tag{display:inline-block;border-radius:99px;padding:3px 10px;font-size:.8rem;font-weight:750;margin-bottom:8px}.direct{background:#e3f5eb;color:var(--green)}.verify{background:#fff1d1;color:var(--amber)}.exclude{background:#fde8e8;color:var(--red)}.spont{background:#e9edff;color:#293f91}
+small,.muted{color:var(--muted)}ul{padding-left:22px}li{margin:.35em 0}nav ol{columns:2;padding-left:22px}table{border-collapse:collapse;width:100%;background:#fff;margin:12px 0}th,td{padding:10px;text-align:left;vertical-align:top;border:1px solid var(--line)}th{background:#edf1fa}footer{max-width:1000px;margin:25px auto;padding:0 18px 35px;color:var(--muted);font-size:.9rem}
+@media(max-width:600px){nav ol{columns:1}table{font-size:.9rem}}
+
+
+/* Styles de la page annexe intégrée */
+
+:root{--ink:#20263a;--muted:#667085;--bg:#f5f7fb;--card:#fff;--line:#dfe6f1;--purple:#6553c7;--purple-bg:#eeebff;--teal:#116f80;--teal-bg:#dff3f6;--pink:#963c63;--pink-bg:#fbe6ee;--blue:#345b9d;--blue-bg:#e4edff;--slate:#4c5869;--slate-bg:#e9edf3;--green:#176b49;--green-bg:#e0f4e8}
+*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:90px}body{margin:0;background:linear-gradient(130deg,#f2f0ff 0%,var(--bg) 35%,#f5f8fc 100%);color:var(--ink);font:16px/1.7 system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif}main{max-width:1120px;margin:0 auto;padding:30px 24px 64px}.hero{padding:28px 30px 26px;background:rgba(255,255,255,.92);border:1px solid #dedaf8;border-radius:24px;box-shadow:0 12px 34px rgba(32,38,58,.06)}.eyebrow{font-size:.78rem;letter-spacing:.08em;font-weight:800;color:var(--purple);text-transform:uppercase}h1{font-size:clamp(2rem,4vw,3rem);line-height:1.12;margin:8px 0 10px;letter-spacing:-.035em}.intro{color:var(--muted);max-width:780px;margin:0}.jump{display:flex;flex-wrap:wrap;gap:9px;margin:20px 0 28px;position:sticky;top:0;z-index:5;padding:12px 0;background:rgba(245,247,251,.94);backdrop-filter:blur(12px)}.jump a{text-decoration:none;font-size:.88rem;font-weight:750;padding:8px 13px;border-radius:999px;border:1px solid transparent}.jump .m{background:var(--pink-bg);color:var(--pink);border-color:#e9bfd0}.jump .r{background:var(--blue-bg);color:var(--blue);border-color:#c2d4f3}.jump .s{background:var(--slate-bg);color:var(--slate);border-color:#cfd7e2}.jump .home{background:var(--purple-bg);color:var(--purple);border-color:#d5ceff}.section{margin:26px 0 34px;padding-top:20px;border-top:3px solid var(--section-color);scroll-margin-top:80px}.section h2{margin:0 0 18px;padding:12px 16px;border-radius:14px;background:var(--section-bg);color:var(--section-color);border:1px solid var(--section-border);font-size:clamp(1.3rem,2.5vw,1.65rem);line-height:1.3}#messages{--section-color:var(--pink);--section-bg:var(--pink-bg);--section-border:#e9bfd0}#rules{--section-color:var(--blue);--section-bg:var(--blue-bg);--section-border:#c2d4f3}#sources{--section-color:var(--slate);--section-bg:var(--slate-bg);--section-border:#cfd7e2}.card{background:var(--card);border:1px solid var(--line);border-radius:17px;padding:20px 22px;margin:13px 0;box-shadow:0 5px 15px rgba(32,38,58,.035);overflow-wrap:anywhere}.template{border-color:#f0dce5}.template h3{font-size:1.12rem;line-height:1.35;margin:0 0 12px}.template p:first-of-type{margin-top:0}p{margin:10px 0}a{color:#5947d2;text-underline-offset:3px}a:hover{color:#34259c}.eyebrow{margin-bottom:8px}table{width:100%;border-collapse:separate;border-spacing:0;background:white;border:1px solid #d9e3f2;border-radius:15px;overflow:hidden}th,td{padding:14px 16px;text-align:left;vertical-align:top;border-bottom:1px solid #e5ebf4}th{background:#e4edff;color:#345b9d;font-size:.93rem}tr:last-child td{border-bottom:0}td:first-child{font-weight:800;min-width:180px}.note{padding:15px 18px;background:#f8faff;border:1px solid #dfe6f1;border-radius:14px;color:#4b5565;margin-top:14px}.source h3{font-size:1.05rem;margin:0 0 8px}.source p:first-of-type{margin-top:0}.footer{margin-top:38px;padding-top:18px;border-top:1px solid #dfe6f1;color:var(--muted);font-size:.9rem}.back{display:inline-flex;align-items:center;gap:8px;font-weight:750;text-decoration:none}@media(max-width:700px){main{padding:16px 13px 40px}.hero{padding:22px 18px}.jump{gap:6px}.jump a{font-size:.8rem;padding:7px 10px}.card{padding:17px}table,tbody,tr,td{display:block;width:100%}thead{display:none}tr{padding:8px 0;border-bottom:1px solid #dfe6f1}td{border-bottom:0;padding:7px 12px}td:first-child{min-width:0;color:#345b9d}}
+
+/* Intégration du guide dans le même fichier : navigation et sections autonomes */
+#guide-candidature{margin-top:3rem;padding-top:1rem;border-top:3px solid #6478b9;}
+#guide-candidature .hero{padding:1.5rem;border-radius:18px;background:#eef2ff;border:1px solid #d9e2ff;margin-bottom:1rem;}
+#guide-candidature .hero h2{margin:.4rem 0;font-size:2rem;}
+#guide-candidature .jump{display:flex;flex-wrap:wrap;gap:.6rem;position:sticky;top:0;z-index:10;padding:.7rem;background:rgba(248,250,255,.96);border:1px solid #dbe3f0;border-radius:14px;margin:1rem 0;}
+#guide-candidature .jump a{display:inline-block;padding:.55rem .8rem;border-radius:999px;text-decoration:none;font-weight:700;border:1px solid #dbe3f0;background:#fff;}
+#guide-candidature .jump .m{background:#fbe6ee;color:#963c63;border-color:#f2bfd2;}
+#guide-candidature .jump .r{background:#e4edff;color:#345b9d;border-color:#bfd2ff;}
+#guide-candidature .jump .s{background:#e9edf3;color:#4c5869;border-color:#cdd5df;}
+#guide-candidature .section{scroll-margin-top:5rem;margin-top:1.5rem;}
+#guide-candidature .card{break-inside:avoid;}
+
+
+/* DA restaurée : onglets pastel, rubriques colorées, sans liserés verticaux */
+:root{--ink:#20263a;--muted:#667085;--bg:#f5f7fb;--card:#fff;--line:#dfe6f1;--purple:#6553c7;--purple-bg:#eeebff;--teal:#116f80;--teal-bg:#dff3f6;--green:#176b49;--green-bg:#e0f4e8;--amber:#8b5710;--amber-bg:#fff0d2;--pink:#963c63;--pink-bg:#fbe6ee;--blue:#345b9d;--blue-bg:#e4edff;--brown:#765239;--brown-bg:#f3e8df;--slate:#4c5869;--slate-bg:#e9edf3}
+html{scroll-behavior:smooth;scroll-padding-top:112px}
+body{background:linear-gradient(130deg,#f2f0ff 0%,#f5f7fb 40%,#f5f8fc 100%);color:var(--ink);font:16px/1.65 system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif}
+.hero-header{background:transparent;color:var(--ink);padding:28px 18px 12px;}
+.hero-inner{max-width:1120px;margin:0 auto;padding:28px 30px;background:rgba(255,255,255,.92);border:1px solid #dedaf8;border-radius:24px;box-shadow:0 12px 34px rgba(32,38,58,.06)}
+.hero-header .eyebrow{font-size:.78rem;letter-spacing:.08em;font-weight:800;color:var(--purple);text-transform:uppercase;margin-bottom:8px}
+.hero-header h1{font-size:clamp(2rem,4vw,3rem);line-height:1.12;margin:8px 0 10px;letter-spacing:-.035em;color:#20263a}
+.hero-header .intro{color:var(--muted);max-width:780px;margin:0}
+.hero-pills{display:flex;flex-wrap:wrap;gap:8px;margin-top:18px}.hero-pills span{display:inline-block;border-radius:999px;padding:6px 11px;background:var(--purple-bg);color:var(--purple);border:1px solid #d5ceff;font-size:.82rem;font-weight:750}.hero-pills span:nth-child(2){background:var(--teal-bg);color:var(--teal);border-color:#b9e2e8}.hero-pills span:nth-child(3){background:var(--green-bg);color:var(--green);border-color:#b8e4ca}
+main{max-width:1120px;margin:0 auto;padding:12px 24px 64px}
+.jump{display:flex;flex-wrap:wrap;gap:8px;position:sticky;top:0;z-index:20;max-width:1120px;margin:0 auto 20px;padding:12px 18px;background:rgba(245,247,251,.96);border-bottom:1px solid #dfe6f1;backdrop-filter:blur(12px)}
+.jump a{display:inline-flex;align-items:center;text-decoration:none;font-size:.84rem;font-weight:800;padding:8px 12px;border-radius:999px;border:1px solid transparent;white-space:normal;line-height:1.25}
+.jump .home{background:var(--purple-bg);color:var(--purple);border-color:#d5ceff}.jump .pb{background:#e8e3ff;color:#5143b7;border-color:#cfc5ff}.jump .pm{background:var(--teal-bg);color:var(--teal);border-color:#b9e2e8}.jump .po{background:var(--green-bg);color:var(--green);border-color:#b8e4ca}.jump .alt{background:var(--amber-bg);color:var(--amber);border-color:#f5d18a}.jump .msg{background:var(--pink-bg);color:var(--pink);border-color:#efc0d2}.jump .targets{background:var(--blue-bg);color:var(--blue);border-color:#c2d4f3}.jump .niches{background:var(--brown-bg);color:var(--brown);border-color:#e5cbb7}.jump .training{background:var(--pink-bg);color:var(--pink);border-color:#efc0d2}.jump .health{background:var(--brown-bg);color:var(--brown);border-color:#e5cbb7}.jump .creator{background:var(--teal-bg);color:var(--teal);border-color:#b9e2e8}.jump .rules{background:var(--blue-bg);color:var(--blue);border-color:#c2d4f3}.jump .sources{background:var(--slate-bg);color:var(--slate);border-color:#cfd7e2}
+.notice{border-radius:16px;background:#fff8e8;border:1px solid #efd9a3}
+.card{border-radius:16px;box-shadow:0 5px 15px rgba(32,38,58,.035);border-color:var(--line)}
+/* Category headings use the exact same pastel language as their navigation tab. */
+main>section[id],main section[id]{scroll-margin-top:112px;border-top:3px solid var(--section-color,var(--purple));border-left:0!important;border-right:0!important;border-bottom:0!important;padding-top:18px;margin:26px 0 34px}
+main section[id]>h2,main>section[id]>h2{margin:0 0 18px;padding:12px 16px;border-radius:14px;background:var(--section-bg,var(--purple-bg));color:var(--section-color,var(--purple));border:1px solid var(--section-border,#d5ceff);font-size:clamp(1.3rem,2.5vw,1.65rem);line-height:1.3}
+#overview{--section-color:var(--purple);--section-bg:var(--purple-bg);--section-border:#d5ceff}
+#product{--section-color:#5143b7;--section-bg:#e8e3ff;--section-border:#cfc5ff}
+#ops{--section-color:var(--teal);--section-bg:var(--teal-bg);--section-border:#b9e2e8}
+#automation{--section-color:var(--green);--section-bg:var(--green-bg);--section-border:#b8e4ca}
+#implementation{--section-color:var(--amber);--section-bg:var(--amber-bg);--section-border:#f5d18a}
+#training{--section-color:var(--pink);--section-bg:var(--pink-bg);--section-border:#efc0d2}
+#health{--section-color:var(--brown);--section-bg:var(--brown-bg);--section-border:#e5cbb7}
+#creator{--section-color:var(--teal);--section-bg:var(--teal-bg);--section-border:#b9e2e8}
+#targets{--section-color:var(--blue);--section-bg:var(--blue-bg);--section-border:#c2d4f3}
+#niches{--section-color:var(--brown);--section-bg:var(--brown-bg);--section-border:#e5cbb7}
+.overview-lead{color:var(--muted);margin:0 0 16px}
+.overview-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}
+.overview-tile{padding:16px 17px;border-radius:16px;border:1px solid var(--tile-border);background:var(--tile-bg);color:var(--tile-ink)}
+.overview-tile .eyebrow{font-size:.72rem;letter-spacing:.04em;font-weight:850;margin-bottom:8px;color:inherit}
+.overview-tile h3{font-size:1rem;margin:0 0 6px;color:inherit}
+.overview-tile p{margin:0;font-size:.92rem;line-height:1.55}
+.overview-tile.purple{--tile-bg:#eeebff;--tile-border:#d5ceff;--tile-ink:#5143b7}
+.overview-tile.teal{--tile-bg:#dff3f6;--tile-border:#b9e2e8;--tile-ink:#116f80}
+.overview-tile.amber{--tile-bg:#fff0d2;--tile-border:#f5d18a;--tile-ink:#8b5710}
+.filter-note{margin-top:14px;padding:13px 15px;background:#fff;border-left:4px solid var(--purple);border-radius:0 12px 12px 0;color:#4b5565;font-size:.92rem}
+.target-grid,.niche-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:13px}
+.target-card,.niche-card{background:#fff;border:1px solid var(--line);border-radius:16px;padding:17px;box-shadow:0 5px 15px rgba(32,38,58,.035)}
+.target-card h3,.niche-card h3{margin:0 0 7px;font-size:1.02rem}
+.target-card p,.niche-card p{font-size:.92rem;margin:8px 0}
+.target-card a{font-size:.9rem}
+@media(max-width:760px){.overview-grid,.target-grid,.niche-grid{grid-template-columns:1fr}}
+#guide-candidature{--section-color:var(--purple);--section-bg:var(--purple-bg);--section-border:#d5ceff;margin-top:30px;padding-top:18px;border-left:0!important;border-right:0!important}
+#messages{--section-color:var(--pink);--section-bg:var(--pink-bg);--section-border:#efc0d2}
+#rules{--section-color:var(--blue);--section-bg:var(--blue-bg);--section-border:#c2d4f3}
+#sources{--section-color:var(--slate);--section-bg:var(--slate-bg);--section-border:#cfd7e2}
+/* Never let legacy side rails cascade down the page. */
+section,section.section,#guide-candidature .section{border-left:0!important;border-right:0!important}
+#guide-candidature .section{border-top:3px solid var(--section-color);padding-top:18px}
+@media(max-width:700px){.hero-header{padding:16px 12px 8px}.hero-inner{padding:22px 18px}.jump{gap:6px;padding:9px 10px}.jump a{font-size:.78rem;padding:7px 9px}main{padding:10px 13px 40px}}
+
+
+/* Ajustements de l'édition test : aucun rail vertical sur les sections. */
+section, section.section, #guide-candidature .section {
+  border-left: 0 !important;
+  border-right: 0 !important;
+}
+.filter-note { border-left: 0 !important; border-right: 0 !important; }
+.test-kpis { display:grid; grid-template-columns:repeat(auto-fit,minmax(180px,1fr)); gap:12px; margin:16px 0; }
+.test-kpi { background:#fff; border:1px solid var(--line); border-radius:15px; padding:16px; }
+.test-kpi strong { display:block; font-size:1.65rem; line-height:1.2; color:var(--purple); }
+.test-kpi span { color:var(--muted); font-size:.9rem; }
+.job-label { display:inline-block; border-radius:99px; padding:4px 10px; font-size:.78rem; font-weight:800; margin:0 6px 8px 0; }
+.job-label.excluded { background:#fbe6ee; color:#963c63; }
+.job-label.checked { background:#fff0d2; color:#8b5710; }
+.job-label.history { background:#e4edff; color:#345b9d; }
+.action-box { background:#fff; border:1px solid var(--line); border-radius:15px; padding:16px 18px; margin:12px 0; }
+.action-box h3 { margin-top:0; }
+.small-note { font-size:.9rem; color:var(--muted); }
+.copy-template { white-space:normal; background:#fafbff; border:1px dashed #c7cfea; border-radius:12px; padding:14px; }
+@media(max-width:700px) { .test-kpis { grid-template-columns:1fr; } }
+
+
+/* Edition 12 octobre : badges et hiérarchie, sans liserés verticaux */
+section, section.section, #guide-candidature .section, .filter-note { border-left:0!important;border-right:0!important; }
+.summary-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px;margin:16px 0}
+.metric{background:#fff;border:1px solid #dfe6f1;border-radius:17px;padding:17px}
+.metric b{display:block;font-size:1.75rem;color:#6553c7;line-height:1.2}.metric span{font-size:.88rem;color:#667085}
+.job-card{background:#fff;border:1px solid #dfe6f1;border-radius:18px;padding:22px;margin:15px 0;box-shadow:0 5px 15px #20263a0a}
+.job-card h3{margin:8px 0 5px;font-size:1.2rem}
+.job-card .job-meta{display:flex;flex-wrap:wrap;gap:7px;margin:9px 0 14px}
+.job-card .job-meta span{background:#f2f4fa;border-radius:99px;padding:5px 10px;font-size:.82rem;color:#4c5869}
+.job-card .job-meta .match{background:#fff0d2;color:#8b5710}
+.job-card .job-meta .no{background:#fbe6ee;color:#963c63}
+.job-card .job-meta .yes{background:#e0f4e8;color:#176b49}
+.job-card .decision{padding:12px 15px;background:#fafbff;border:1px solid #e3e7f3;border-radius:12px}
+.job-card .score{font-weight:850;font-size:1.1rem;color:#6553c7}
+.callout{background:#fff;border:1px solid #dfe6f1;border-radius:15px;padding:16px 18px;margin:12px 0}
+.callout.warn{background:#fffaf0;border-color:#f2dfb9}
+.callout.ok{background:#f4fbf7;border-color:#c8ead4}
+.detail-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.detail-grid>div{padding:12px;background:#f8faff;border-radius:12px}
+.detail-grid h4{margin:0 0 6px;color:#345b9d}.detail-grid p{margin:0;font-size:.92rem}
+.source-date{font-size:.85rem;color:#667085}.template-copy{padding:15px;background:#fafbff;border:1px dashed #c6cfea;border-radius:12px}
+.mini-table{width:100%;border-collapse:separate;border-spacing:0;background:#fff;border:1px solid #dfe6f1;border-radius:15px;overflow:hidden}
+.mini-table th,.mini-table td{padding:10px 12px;border-bottom:1px solid #e5ebf4;font-weight:400;min-width:0}.mini-table th{font-weight:750}
+@media(max-width:800px){.summary-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.detail-grid{grid-template-columns:1fr}}
+@media(max-width:480px){.summary-grid{grid-template-columns:1fr}.job-card{padding:16px}}
+</style></head><body><header class="hero-header"><div class="hero-inner"><h1>Le Tremplin</h1><p>Opportunités Product, Ops, IA et No-Code</p><a href="/archives.html">Archives</a></div></header><nav class="jump"><a class="home" href="#overview">overview</a><a class="home" href="#product">product</a><a class="home" href="#ops">ops</a><a class="home" href="#automation">automation</a><a class="home" href="#implementation">implementation</a><a class="home" href="#training">training</a><a class="home" href="#health">health</a><a class="home" href="#creator">creator</a><a class="home" href="#targets">targets</a><a class="home" href="#niches">niches</a><a class="home" href="#messages">messages</a><a class="home" href="#rules">rules</a><a class="home" href="#sources">sources</a></nav><main><h2>Édition du 12 octobre 2026</h2><article class="card"><h2>OPTIMADMIN — Consultant(e) en Automatisation & IA</h2><p>B — À confirmer. Mission freelance automatisation et IA, 100 % distanciel annoncé. Disponibilité, pays d’exercice et tarif à vérifier.</p><a href="https://taleez.com/apply/consultant-e-en-automatisation-ia-externalisation-administrative-freelance-20h-semaine-distanciel-antananarivo-optimadmin" target="_blank" rel="noopener">Annonce officielle</a></article><article class="card"><h2>Uptoo — Product Builder IA / Product Owner</h2><p>D — Incompatible avec une recherche intégralement à distance : 2 jours de télétravail annoncés.</p><a href="https://uptoo.fr/emploi/offre/50234/" target="_blank" rel="noopener">Annonce officielle</a></article><article class="card"><h2>Alan — Ops & Product Builder</h2><p>D — Mode hybride et anglais courant exigé.</p><a href="https://jobs.ashbyhq.com/alan/45ed9eaa-d406-418c-912a-c51d4cfb079c" target="_blank" rel="noopener">Annonce officielle</a></article><p>Analyse datée, conditions à vérifier sur les sources. Aucun contact ni candidature envoyé.</p></main><footer>Le Tremplin</footer></body></html>
