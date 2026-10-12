@@ -1,0 +1,77 @@
+name: LE TREMPLIN — publication hebdomadaire
+on:
+  schedule:
+    # Deux heures UTC couvrent 09:00 Europe/Paris été et hiver.
+    - cron: "0 7,8 * * 1"
+  workflow_dispatch:
+    inputs:
+      test_mode:
+        description: 'Test sans publication (recommandé)'
+        type: boolean
+        default: true
+        required: true
+permissions:
+  contents: write
+concurrency:
+  group: le-tremplin-publication
+  cancel-in-progress: false
+jobs:
+  edition:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: true
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Vérifier l'heure locale
+        id: time
+        env:
+          EVENT_NAME: ${{ github.event_name }}
+        run: |
+          python - <<'PY'
+          from datetime import datetime
+          from zoneinfo import ZoneInfo
+          import os
+          local = datetime.now(ZoneInfo("Europe/Paris"))
+          valid = os.environ["EVENT_NAME"] == "workflow_dispatch" or (local.weekday() == 0 and local.hour == 9)
+          with open(os.environ["GITHUB_OUTPUT"], "a") as f:
+              f.write(f"publish={'true' if valid else 'false'}\n")
+          print(f"Europe/Paris: {local.isoformat()} | publish={valid}")
+          PY
+      - name: Vérifier la clé API
+        if: steps.time.outputs.publish == 'true'
+        env:
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+        run: |
+          if [ -z "$OPENAI_API_KEY" ]; then
+            echo "::error::Ajouter OPENAI_API_KEY dans Settings > Secrets and variables > Actions."
+            exit 1
+          fi
+      - name: Générer et archiver l'édition
+        if: steps.time.outputs.publish == 'true'
+        env:
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+          TREMPLIN_TEST_MODE: ${{ github.event_name == 'workflow_dispatch' && inputs.test_mode && '1' || '0' }}
+        run: python scripts/publish.py
+      - name: Conserver l'édition de test comme artifact
+        if: github.event_name == 'workflow_dispatch' && inputs.test_mode
+        uses: actions/upload-artifact@v4
+        with:
+          name: le-tremplin-test-preview
+          path: test-preview.html
+          if-no-files-found: warn
+      - name: Commit et publication
+        if: steps.time.outputs.publish == 'true' && !(github.event_name == 'workflow_dispatch' && inputs.test_mode)
+        run: |
+          if git diff --quiet && [ -z "$(git ls-files --others --exclude-standard)" ]; then
+            echo "Aucune nouvelle édition à publier."
+            exit 0
+          fi
+          git config user.name "le-tremplin-bot"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add index.html editions data/annonces.json
+          git commit -m "LE TREMPLIN : édition hebdomadaire automatisée"
+          git push
+
