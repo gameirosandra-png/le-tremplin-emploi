@@ -67,6 +67,49 @@
       "compatibilite": "B",
       "score": 79,
       "notes": "Full remote déclaré ; pays d’embauche, langue des réunions, déplacements, contrat et rémunération à confirmer."
+    },
+    {
+      "entreprise": "JB-P",
+      "titre": "RevOps Consultant",
+      "url": "https://jb-p.fr/carrieres/offres/revops-consultant",
+      "edition": "2026-11-02",
+      "compatibilite": "B",
+      "score": 82,
+      "notes": "CDI full remote France ; anglais professionnel, déplacements et rémunération à confirmer."
+    },
+    {
+      "entreprise": "Agence média confidentielle",
+      "titre": "Spécialiste automatisation des process — Notion, Make / n8n, agents IA",
+      "url": "https://wisefreelance.com/missions/specialiste-automatisation-des-process-notion-make-n8n-agent-864",
+      "edition": "2026-11-02",
+      "compatibilite": "B",
+      "score": 74,
+      "notes": "Mission longue full remote, 3 à 4 jours/semaine, TJM jusqu’à 450 € HT ; 3 à 7 ans demandés."
+    },
+    {
+      "entreprise": "iAdvize",
+      "titre": "Growth Marketer - No-code & AI",
+      "url": "https://www.welcometothejungle.com/fr/companies/iadvize/jobs/growth-marketer-no-code-ai-f-h-x_nantes",
+      "edition": "2026-11-02",
+      "compatibilite": "D",
+      "notes": "Nantes, télétravail 2 jours/semaine, anglais professionnel > B2."
+    },
+    {
+      "entreprise": "Solinum",
+      "titre": "Stage Automatisation & Optimisation des process",
+      "url": "https://jobs.makesense.org/fr/jobs/solinum-stage-automatisation-et-optimisation-des-process-ia-no-code-zIgLfHLno5VfrnxlYCMv",
+      "edition": "2026-11-02",
+      "compatibilite": "D",
+      "notes": "Stage à Paris avec télétravail occasionnel."
+    },
+    {
+      "entreprise": "Alan",
+      "titre": "Product Builder - Mo (AI health companion)",
+      "url": "https://jobs.ashbyhq.com/alan/3c8dfcd2-822e-419e-8c06-1cae00e08aa2",
+      "identifiant_ats": "3c8dfcd2-822e-419e-8c06-1cae00e08aa2",
+      "edition": "2026-11-02",
+      "compatibilite": "D",
+      "notes": "Hybride, 5+ ans, produit IA livré et anglais courant."
     }
   ]
 }
